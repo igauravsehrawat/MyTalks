@@ -9,14 +9,14 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Show Sublime Text some love slides</title>
+<title>Sublime package code slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="./reveal.js/css/reveal.css">
-<link rel="stylesheet" href="./reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -215,7 +215,8 @@ div.output_prompt {
 <body>
 <div class="reveal">
 <div class="slides">
-<aside class="notes">
+<section>
+    <section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -229,8 +230,7 @@ div.output_prompt {
 </div>
 </div>
 
-</div>
-    </aside></section>
+</div></section>
     </section><section>
     <section>
     
@@ -239,7 +239,15 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Building-a-Sublime-package">Building a Sublime package<a class="anchor-link" href="#Building-a-Sublime-package">&#182;</a></h1>
+<h1 id="sublime">sublime<a class="anchor-link" href="#sublime">&#182;</a></h1><ul>
+<li><p>sublime 2 or  sublime 3</p>
+</li>
+<li><p>sublime 3 - way forward with python 3.</p>
+</li>
+<li>Sublime 2 is stable version, So we will go with sublime2</li>
+<li>concept remains same, some api's change. </li>
+</ul>
+
 </div>
 </div>
 </div></section>
@@ -251,20 +259,32 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="After-using-sublime,-you-gonna-be.">After using sublime, you gonna be.<a class="anchor-link" href="#After-using-sublime,-you-gonna-be.">&#182;</a></h2>
+<h2 id="This-is-how-sample-sublime-plugin-looks-like">This is how sample sublime plugin looks like<a class="anchor-link" href="#This-is-how-sample-sublime-plugin-looks-like">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment" data-fragment-index="3">
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Shut-up-and-take-my-money.jpg" alt="shut_up_meme"></p>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c">## Have to run in inside sublime, since paths are relative</span>
+
+<span class="kn">import</span> <span class="nn">sublime</span><span class="o">,</span> <span class="nn">sublime_plugin</span>
+
+<span class="k">class</span> <span class="nc">SampleCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+	<span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">):</span>
+		<span class="c"># this will just edit the file with hello world at front</span>
+		<span class="c"># that&#39;s cool</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">edit</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="c">## then run view.run_command(&#39;function name&#39;)</span>
+</pre></div>
 
 </div>
 </div>
+</div>
+
 </div>
     </div></section>
     </section><section>
@@ -275,7 +295,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Audience-poll-on-usage">Audience poll on usage<a class="anchor-link" href="#Audience-poll-on-usage">&#182;</a></h2>
+<h2 id="sublime_plugin.TextCommand?">sublime_plugin.TextCommand?<a class="anchor-link" href="#sublime_plugin.TextCommand?">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment" data-fragment-index="5">
@@ -285,10 +305,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Multi-line support</li>
-</ul>
-
+<h2 id="Types-of-command">Types of command<a class="anchor-link" href="#Types-of-command">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -300,40 +317,9 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Command-pallete<ul>
-<li>package manager</li>
-<li>set language type</li>
-<li>snippets</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="7">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Mini-map</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="8">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>And what not, just name it.</li>
+<li>Application commands (ApplicationCommand)</li>
+<li>Window commands (WindowCommand)</li>
+<li>Text commands (TextCommand)</li>
 </ul>
 
 </div>
@@ -348,99 +334,77 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="There-is-plugin-for-every-need">There is plugin for every need<a class="anchor-link" href="#There-is-plugin-for-every-need">&#182;</a></h2>
+<h2 id="Simple-Python-debugging-plugin">Simple Python debugging plugin<a class="anchor-link" href="#Simple-Python-debugging-plugin">&#182;</a></h2><h3 id="That-will-insert-print-statement-including-the-variable-in-selection-and-its-position-with-filename">That will insert print statement including the variable in selection and its position with filename<a class="anchor-link" href="#That-will-insert-print-statement-including-the-variable-in-selection-and-its-position-with-filename">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="10">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Show Link clicker</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="11">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Show to-do list</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="12">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Sublime tweet</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="13">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>PyLint/PyFlakes</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="14">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>You just name it, there is package for it.</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div></section>
+</div></section>
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="http://www.aprogsi.org/file/pic/photo/2015/04/0074ed9598ea340db185d4c82a8c1907_1024.jpg" alt="show me some code"></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">sublime</span>
+<span class="kn">import</span> <span class="nn">sublime_plugin</span>
+
+<span class="c">#</span>
+<span class="c"># Purpose is to insert print statement for the variables while debugging python.</span>
+<span class="c"># I know there pbd is way better.</span>
+<span class="c">#</span>
+
+
+<span class="k">class</span> <span class="nc">DebugPythonCommand</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">TextCommand</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">sel</span><span class="p">():</span>
+            <span class="c"># This sees what current is in selection(generally a variable to be converted to print statement)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">region</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+                <span class="n">replacement</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
+                <span class="n">args</span><span class="p">[</span><span class="s">&#39;contents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;contents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;$SELECTION_OR_CLIPBOARD&#39;</span><span class="p">,</span> <span class="n">replacement</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="s">&#39;insert_snippet&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+            <span class="c"># This copies the clipboard item and convert it into print statement</span>
+                <span class="n">replacement</span> <span class="o">=</span> <span class="n">sublime</span><span class="o">.</span><span class="n">get_clipboard</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">print</span> <span class="s">&quot;args&quot;</span><span class="p">,</span> <span class="n">args</span>
+                <span class="n">args</span><span class="p">[</span><span class="s">&#39;contents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;contents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;$SELECTION_OR_CLIPBOARD&#39;</span><span class="p">,</span> <span class="n">replacement</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="s">&#39;insert_snippet&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Don't-forget-the-keybindings">Don't forget the keybindings<a class="anchor-link" href="#Don't-forget-the-keybindings">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="10">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre>  <span class="p">{</span> <span class="s">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;ctrl+shift+c&quot;</span><span class="p">],</span>
+    <span class="s">&quot;command&quot;</span><span class="p">:</span> <span class="s">&quot;debug_python&quot;</span><span class="p">,</span>
+    <span class="s">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">&quot;contents&quot;</span><span class="p">:</span> <span class="s">&quot;print $SELECTION_OR_CLIPBOARD &#39;=== $TM_FILENAME [$TM_LINE_NUMBER] ===&#39;;${0}&quot;</span>
+    <span class="p">},</span>
+    <span class="s">&quot;context&quot;</span><span class="p">:</span> <span class="p">[{</span>
+      <span class="s">&quot;key&quot;</span><span class="p">:</span> <span class="s">&quot;selector&quot;</span><span class="p">,</span>
+      <span class="s">&quot;operator&quot;</span><span class="p">:</span> <span class="s">&quot;equal&quot;</span><span class="p">,</span>
+      <span class="s">&quot;match_all&quot;</span><span class="p">:</span> <span class="n">true</span>
+    <span class="p">}]</span>
+  <span class="p">}</span>
 </pre></div>
 
 </div>
@@ -448,12 +412,177 @@ div.output_prompt {
 </div>
 
 </div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="An-Event-based-sublime-api">An Event based sublime api<a class="anchor-link" href="#An-Event-based-sublime-api">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="12">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">sublime</span><span class="o">,</span> <span class="nn">sublime_plugin</span>
+
+<span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+<span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+<span class="n">GOOGLE_AC</span> <span class="o">=</span> <span class="s">r&quot;http://google.com/complete/search?output=toolbar&amp;q=</span><span class="si">%s</span><span class="s">&quot;</span>
+
+<span class="k">class</span> <span class="nc">GoogleAutocomplete</span><span class="p">(</span><span class="n">sublime_plugin</span><span class="o">.</span><span class="n">EventListener</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">on_query_completions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">locations</span><span class="p">):</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span>
+                        <span class="n">urlopen</span><span class="p">(</span><span class="n">GOOGLE_AC</span> <span class="o">%</span> <span class="n">prefix</span><span class="p">)</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&quot;./CompleteSuggestion/suggestion&quot;</span><span class="p">)</span>
+
+        <span class="n">sugs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&quot;data&quot;</span><span class="p">],)</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">sugs</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
-<script src="./reveal.js/lib/js/head.min.js"></script>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sublime-is-huge-due-to-its-complexity">Sublime is huge due to its complexity<a class="anchor-link" href="#Sublime-is-huge-due-to-its-complexity">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="14">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="When-your-plugings-have-more-complexities,-make-it-a-package">When your plugings have more complexities, make it a package<a class="anchor-link" href="#When-your-plugings-have-more-complexities,-make-it-a-package">&#182;</a></h2>
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Package-is-container-of-sublime-resources">Package is container of sublime resources<a class="anchor-link" href="#Package-is-container-of-sublime-resources">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="16">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Following-are-types-of-resources">Following are types of resources<a class="anchor-link" href="#Following-are-types-of-resources">&#182;</a></h3><ul>
+<li>Build systems (.sublime-build)</li>
+<li>Key maps (.sublime-keymap)</li>
+<li>Macros (.sublime-macro)</li>
+<li>Menus (.sublime-menu)</li>
+<li>Plugins (.py)</li>
+<li>Preferences (.tmPreferences)</li>
+<li>Settings (.sublime-settings)</li>
+<li>Syntax definitions (.tmLanguage)</li>
+<li>Snippets (.sublime-snippet)</li>
+<li>Themes (.sublime-theme)</li>
+</ul>
 
-<script src="./reveal.js/js/reveal.js"></script>
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
+<li><a href="http://sublime-text-unofficial-documentation.readthedocs.org/en/stable/index.html">http://sublime-text-unofficial-documentation.readthedocs.org/en/stable/index.html</a></li>
+<li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
+<li></li>
+</ul>
+
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1 style="font-size:42px"><b>Gaurav Sehrawat</b></h1> <img src="pic.jpg" style="height:100px;width:100px"></p>
+
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="19">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ships-and-collaborate-code-@Clay-Labs">Ships and collaborate code @<a href="http://claylabs.com">Clay Labs</a><a class="anchor-link" href="#Ships-and-collaborate-code-@Clay-Labs">&#182;</a></h2>
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="20">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Github:-igauravsehrawat">Github: <a href="https://github.com/igauravsehrawat">igauravsehrawat</a><a class="anchor-link" href="#Github:-igauravsehrawat">&#182;</a></h2>
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="21">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Twitter:-root3d">Twitter: <a href="https://twitter.com/root3d/">root3d</a><a class="anchor-link" href="#Twitter:-root3d">&#182;</a></h2>
+</div>
+</div>
+</div>
+    </div></section>
+    </section>
+</div>
+</div>
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+
+<script src="reveal.js/js/reveal.js"></script>
 
 <script>
 

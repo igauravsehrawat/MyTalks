@@ -16,5 +16,5 @@
 + [DNS Records](https://igauravsehrawat.com/MyTalks/PyDelhi/dns-records/DNS%20Name%20Records.slides.html)
 + [Gotchas In Python](https://igauravsehrawat.com/MyTalks/PyDelhi/tricky-python/Gotchas%20In%20Python.slides.html)
 
-### [IT Development Cafe](https://www.meetup.com/IT-Development-Cafe/)
+### [IT Development Cafe Amsterdam](https://www.meetup.com/IT-Development-Cafe/)
 + [Intro to GraphQL](https://igauravsehrawat.com/MyTalks/IT-Development-Cafe-Amsterdam/GraphQL-103.slides.html)

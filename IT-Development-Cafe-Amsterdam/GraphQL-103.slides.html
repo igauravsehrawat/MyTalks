@@ -13207,41 +13207,14 @@ a.anchor-link {
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Not</span> <span class="n">just</span> <span class="n">GraphQL</span><span class="p">,</span> <span class="n">but</span> <span class="n">also</span> <span class="n">the</span> <span class="n">implementation</span><span class="o">.</span>
-<span class="n">Seeing</span> <span class="n">the</span> <span class="n">code</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-2-276ccb584ab4&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    Not just GraphQL, but also the implementation.</span>
-           ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Not just GraphQL, but also the implementation.
+Seeing the code</p>
 
 </div>
 </div>
-
 </div>
 </aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -13250,17 +13223,26 @@ a.anchor-link {
 <h1 id="What-is-GraphQL?">What is GraphQL?<a class="anchor-link" href="#What-is-GraphQL?">&#182;</a></h1>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/show-off-hands.gif" alt="show off hands"></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
 <pre><code>talkStructure {
     'What is GraphQL?',
-    'GraphQL specs',
-    'Building blocks of GraphQL.',
+    'Design Principle of GraphQL.',
     'Comparison with Rest',
-    'GraphQL IDE',
+    'GraphQL specs',
+    'GraphQL tools',
+    'Our Tech Stack',
     'Building an API on backend',
     'Consuming API on frontend'
 }</code></pre>
@@ -13273,6 +13255,13 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="What-is-GraphQL?">What is GraphQL?<a class="anchor-link" href="#What-is-GraphQL?">&#182;</a></h1><p><img src="https://graphql.org/img/logo.svg" height="480px" width="480px"/></p>
 
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="GraphQL-is-a-query-language-designed-to-build-client-applications-by-providing-an-intuitive">GraphQL is a query language designed to build client applications by providing an intuitive<a class="anchor-link" href="#GraphQL-is-a-query-language-designed-to-build-client-applications-by-providing-an-intuitive">&#182;</a></h2><h2 id="and-flexible-syntax">and flexible syntax<a class="anchor-link" href="#and-flexible-syntax">&#182;</a></h2><h2 id="and-system-for-describing-their-data-requirements-and-interactions">and system for describing their data requirements and interactions<a class="anchor-link" href="#and-system-for-describing-their-data-requirements-and-interactions">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13294,27 +13283,44 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-query-language-for-your-API">A query language for your API<a class="anchor-link" href="#A-query-language-for-your-API">&#182;</a></h2>
+<h1 id="Design-Principles-Of-GraphQL">Design Principles Of GraphQL<a class="anchor-link" href="#Design-Principles-Of-GraphQL">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hierarchical">Hierarchical<a class="anchor-link" href="#Hierarchical">&#182;</a></h2><h2 id="Product&#8208;centric">Product&#8208;centric<a class="anchor-link" href="#Product&#8208;centric">&#182;</a></h2><h2 id="Strong&#8208;typing">Strong&#8208;typing<a class="anchor-link" href="#Strong&#8208;typing">&#182;</a></h2><h2 id="Client&#8208;specified-queries">Client&#8208;specified queries<a class="anchor-link" href="#Client&#8208;specified-queries">&#182;</a></h2><h2 id="Introspective">Introspective<a class="anchor-link" href="#Introspective">&#182;</a></h2>
 </div>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">GraphQL</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">query</span> <span class="n">language</span> <span class="n">designed</span> <span class="n">to</span> <span class="n">build</span> <span class="n">client</span> <span class="n">applications</span> <span class="n">by</span> <span class="n">providing</span> <span class="n">an</span> <span class="n">intuitive</span> 
-<span class="ow">and</span> <span class="n">flexible</span> <span class="n">syntax</span> <span class="ow">and</span> <span class="n">system</span> 
-<span class="k">for</span> <span class="n">describing</span> <span class="n">their</span> <span class="n">data</span> <span class="n">requirements</span> <span class="ow">and</span> <span class="n">interactions</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hierarchical: Most product development today involves the creation and manipulation of view hierarchies.
+    To achieve congruence with the structure of these applications, a GraphQL query itself is structured hierarchically.
+    The query is shaped just like the data it returns. It is a natural way for clients to describe data requirements.</p>
+<p>Product‐centric: GraphQL is unapologetically driven by the requirements of views and the front‐end engineers that write them. 
+    GraphQL starts with their way of thinking and requirements and builds the language and runtime necessary to enable that.</p>
+<p>Strong‐typing: Every GraphQL server defines an application‐specific type system. Queries are executed within the context of that type system.
+    Given a query, tools can ensure that the query is both syntactically correct and valid within the GraphQL type system before execution, i.e. at development time, and the server can make certain guarantees about the shape and nature of the response.</p>
+<p>Client‐specified queries: Through its type system, a GraphQL server publishes the capabilities that its clients are allowed to consume.
+    It is the client that is responsible for specifying exactly how it will consume those published capabilities. These queries are specified at field‐level granularity. In the majority of client‐server applications written without GraphQL, the server determines the data returned in its various scripted endpoints. A GraphQL query, on the other hand, returns exactly what a client asks for and no more.</p>
+<p>Introspective: GraphQL is introspective. A GraphQL server’s type system must be queryable by the GraphQL language itself, as will be described in this specification.
+GraphQL introspection serves as a powerful platform for building common tools and client software libraries.</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 </aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-query-language-for-your-API">A query language for your API<a class="anchor-link" href="#A-query-language-for-your-API">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13329,6 +13335,13 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comparison-With-REST-APIs">Comparison With REST APIs<a class="anchor-link" href="#Comparison-With-REST-APIs">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13349,7 +13362,14 @@ Image @peggyrayzis</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-does-that-means?">What does that means?<a class="anchor-link" href="#What-does-that-means?">&#182;</a></h1>
+<h1 id="Documentation-is-self-sustained.">Documentation is self sustained.<a class="anchor-link" href="#Documentation-is-self-sustained.">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-changes-with-GraphQL?">What changes with GraphQL?<a class="anchor-link" href="#What-changes-with-GraphQL?">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -13370,39 +13390,10 @@ Image @peggyrayzis</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#128241;Mobile">&#128241;Mobile<a class="anchor-link" href="#&#128241;Mobile">&#182;</a></h2><h2 id="&#128421;Website">&#128421;Website<a class="anchor-link" href="#&#128421;Website">&#182;</a></h2><h2 id="&#63743;-iOS">&#63743; iOS<a class="anchor-link" href="#&#63743;-iOS">&#182;</a></h2><h2 id="Android">Android<a class="anchor-link" href="#Android">&#182;</a></h2><h2 id="And-more">And more<a class="anchor-link" href="#And-more">&#182;</a></h2><h3 id="Same-BFF">Same BFF<a class="anchor-link" href="#Same-BFF">&#182;</a></h3>
+<h2 id="&#128241;Mobile">&#128241;Mobile<a class="anchor-link" href="#&#128241;Mobile">&#182;</a></h2><h2 id="&#128421;Website">&#128421;Website<a class="anchor-link" href="#&#128421;Website">&#182;</a></h2><h2 id="iOS">iOS<a class="anchor-link" href="#iOS">&#182;</a></h2><h2 id="Android">Android<a class="anchor-link" href="#Android">&#182;</a></h2><h2 id="And-more">And more<a class="anchor-link" href="#And-more">&#182;</a></h2><h3 id="Same-BFF">Same BFF<a class="anchor-link" href="#Same-BFF">&#182;</a></h3>
 </div>
 </div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Hierarchical</span><span class="p">:</span> <span class="n">Most</span> <span class="n">product</span> <span class="n">development</span> <span class="n">today</span> <span class="n">involves</span> <span class="n">the</span> <span class="n">creation</span> <span class="ow">and</span> <span class="n">manipulation</span> <span class="n">of</span> <span class="n">view</span> <span class="n">hierarchies</span><span class="o">.</span>
-    <span class="n">To</span> <span class="n">achieve</span> <span class="n">congruence</span> <span class="k">with</span> <span class="n">the</span> <span class="n">structure</span> <span class="n">of</span> <span class="n">these</span> <span class="n">applications</span><span class="p">,</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">query</span> <span class="n">itself</span> <span class="ow">is</span> <span class="n">structured</span> <span class="n">hierarchically</span><span class="o">.</span>
-    <span class="n">The</span> <span class="n">query</span> <span class="ow">is</span> <span class="n">shaped</span> <span class="n">just</span> <span class="n">like</span> <span class="n">the</span> <span class="n">data</span> <span class="n">it</span> <span class="n">returns</span><span class="o">.</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">natural</span> <span class="n">way</span> <span class="k">for</span> <span class="n">clients</span> <span class="n">to</span> <span class="n">describe</span> <span class="n">data</span> <span class="n">requirements</span><span class="o">.</span>
-
-<span class="n">Product</span><span class="err">‐</span><span class="n">centric</span><span class="p">:</span> <span class="n">GraphQL</span> <span class="ow">is</span> <span class="n">unapologetically</span> <span class="n">driven</span> <span class="n">by</span> <span class="n">the</span> <span class="n">requirements</span> <span class="n">of</span> <span class="n">views</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">front</span><span class="err">‐</span><span class="n">end</span> <span class="n">engineers</span> <span class="n">that</span> <span class="n">write</span> <span class="n">them</span><span class="o">.</span> 
-    <span class="n">GraphQL</span> <span class="n">starts</span> <span class="k">with</span> <span class="n">their</span> <span class="n">way</span> <span class="n">of</span> <span class="n">thinking</span> <span class="ow">and</span> <span class="n">requirements</span> <span class="ow">and</span> <span class="n">builds</span> <span class="n">the</span> <span class="n">language</span> <span class="ow">and</span> <span class="n">runtime</span> <span class="n">necessary</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">that</span><span class="o">.</span>
-
-<span class="n">Strong</span><span class="err">‐</span><span class="n">typing</span><span class="p">:</span> <span class="n">Every</span> <span class="n">GraphQL</span> <span class="n">server</span> <span class="n">defines</span> <span class="n">an</span> <span class="n">application</span><span class="err">‐</span><span class="n">specific</span> <span class="nb">type</span> <span class="n">system</span><span class="o">.</span> <span class="n">Queries</span> <span class="n">are</span> <span class="n">executed</span> <span class="n">within</span> <span class="n">the</span> <span class="n">context</span> <span class="n">of</span> <span class="n">that</span> <span class="nb">type</span> <span class="n">system</span><span class="o">.</span>
-    <span class="n">Given</span> <span class="n">a</span> <span class="n">query</span><span class="p">,</span> <span class="n">tools</span> <span class="n">can</span> <span class="n">ensure</span> <span class="n">that</span> <span class="n">the</span> <span class="n">query</span> <span class="ow">is</span> <span class="n">both</span> <span class="n">syntactically</span> <span class="n">correct</span> <span class="ow">and</span> <span class="n">valid</span> <span class="n">within</span> <span class="n">the</span> <span class="n">GraphQL</span> <span class="nb">type</span> <span class="n">system</span> <span class="n">before</span> <span class="n">execution</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">at</span> <span class="n">development</span> <span class="n">time</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">server</span> <span class="n">can</span> <span class="n">make</span> <span class="n">certain</span> <span class="n">guarantees</span> <span class="n">about</span> <span class="n">the</span> <span class="n">shape</span> <span class="ow">and</span> <span class="n">nature</span> <span class="n">of</span> <span class="n">the</span> <span class="n">response</span><span class="o">.</span>
-
-<span class="n">Client</span><span class="err">‐</span><span class="n">specified</span> <span class="n">queries</span><span class="p">:</span> <span class="n">Through</span> <span class="n">its</span> <span class="nb">type</span> <span class="n">system</span><span class="p">,</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">server</span> <span class="n">publishes</span> <span class="n">the</span> <span class="n">capabilities</span> <span class="n">that</span> <span class="n">its</span> <span class="n">clients</span> <span class="n">are</span> <span class="n">allowed</span> <span class="n">to</span> <span class="n">consume</span><span class="o">.</span>
-    <span class="n">It</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">client</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">specifying</span> <span class="n">exactly</span> <span class="n">how</span> <span class="n">it</span> <span class="n">will</span> <span class="n">consume</span> <span class="n">those</span> <span class="n">published</span> <span class="n">capabilities</span><span class="o">.</span> <span class="n">These</span> <span class="n">queries</span> <span class="n">are</span> <span class="n">specified</span> <span class="n">at</span> <span class="n">field</span><span class="err">‐</span><span class="n">level</span> <span class="n">granularity</span><span class="o">.</span> <span class="n">In</span> <span class="n">the</span> <span class="n">majority</span> <span class="n">of</span> <span class="n">client</span><span class="err">‐</span><span class="n">server</span> <span class="n">applications</span> <span class="n">written</span> <span class="n">without</span> <span class="n">GraphQL</span><span class="p">,</span> <span class="n">the</span> <span class="n">server</span> <span class="n">determines</span> <span class="n">the</span> <span class="n">data</span> <span class="n">returned</span> <span class="ow">in</span> <span class="n">its</span> <span class="n">various</span> <span class="n">scripted</span> <span class="n">endpoints</span><span class="o">.</span> <span class="n">A</span> <span class="n">GraphQL</span> <span class="n">query</span><span class="p">,</span> <span class="n">on</span> <span class="n">the</span> <span class="n">other</span> <span class="n">hand</span><span class="p">,</span> <span class="n">returns</span> <span class="n">exactly</span> <span class="n">what</span> <span class="n">a</span> <span class="n">client</span> <span class="n">asks</span> <span class="k">for</span> <span class="ow">and</span> <span class="n">no</span> <span class="n">more</span><span class="o">.</span>
-
-<span class="n">Introspective</span><span class="p">:</span> <span class="n">GraphQL</span> <span class="ow">is</span> <span class="n">introspective</span><span class="o">.</span> <span class="n">A</span> <span class="n">GraphQL</span> <span class="n">server</span><span class="err">’</span><span class="n">s</span> <span class="nb">type</span> <span class="n">system</span> <span class="n">must</span> <span class="n">be</span> <span class="n">queryable</span> <span class="n">by</span> <span class="n">the</span> <span class="n">GraphQL</span> <span class="n">language</span> <span class="n">itself</span><span class="p">,</span> <span class="k">as</span> <span class="n">will</span> <span class="n">be</span> <span class="n">described</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">specification</span><span class="o">.</span>
-<span class="n">GraphQL</span> <span class="n">introspection</span> <span class="n">serves</span> <span class="k">as</span> <span class="n">a</span> <span class="n">powerful</span> <span class="n">platform</span> <span class="k">for</span> <span class="n">building</span> <span class="n">common</span> <span class="n">tools</span> <span class="ow">and</span> <span class="n">client</span> <span class="n">software</span> <span class="n">libraries</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13413,10 +13404,100 @@ Image @peggyrayzis</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="So-what-is-there-in-GraphQL?">So what is there in GraphQL?<a class="anchor-link" href="#So-what-is-there-in-GraphQL?">&#182;</a></h1>
+<h1 id="So-what-is-there-in-GraphQL-specs?">So what is there in GraphQL specs?<a class="anchor-link" href="#So-what-is-there-in-GraphQL-specs?">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="TypeDefinition">TypeDefinition<a class="anchor-link" href="#TypeDefinition">&#182;</a></h2><h3 id="ScalarTypeDefinition">ScalarTypeDefinition<a class="anchor-link" href="#ScalarTypeDefinition">&#182;</a></h3><h3 id="ObjectTypeDefinition">ObjectTypeDefinition<a class="anchor-link" href="#ObjectTypeDefinition">&#182;</a></h3><h3 id="InterfaceTypeDefinition">InterfaceTypeDefinition<a class="anchor-link" href="#InterfaceTypeDefinition">&#182;</a></h3><h3 id="UnionTypeDefinition">UnionTypeDefinition<a class="anchor-link" href="#UnionTypeDefinition">&#182;</a></h3><h3 id="EnumTypeDefinition">EnumTypeDefinition<a class="anchor-link" href="#EnumTypeDefinition">&#182;</a></h3><h3 id="InputObjectTypeDefinition">InputObjectTypeDefinition<a class="anchor-link" href="#InputObjectTypeDefinition">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Enum-Type">Enum Type<a class="anchor-link" href="#Enum-Type">&#182;</a></h2>
+<pre><code>enum Episode {
+  NEWHOPE
+  EMPIRE
+  JEDI
+}</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Interface">Interface<a class="anchor-link" href="#Interface">&#182;</a></h2>
+<pre><code>interface Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  appearsIn: [Episode]!
+}</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Union-Type">Union Type<a class="anchor-link" href="#Union-Type">&#182;</a></h3>
+<pre><code>union SearchResult = Human | Droid | Starship</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Input-Type">Input Type<a class="anchor-link" href="#Input-Type">&#182;</a></h3>
+<pre><code>input ReviewInput {
+  stars: Int!
+  commentary: String
+}</code></pre>
+
 </div>
 </div>
 </div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using it like</p>
+
+<pre><code>mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    stars
+    commentary
+  }
+}</code></pre>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The fundamental unit of any GraphQL Schema is the type.
+There are six kinds of named type definitions in GraphQL, and two wrapping types.</p>
+<p>The most basic type is a Scalar. 
+A scalar represents a primitive value, like a string or an integer. Oftentimes, the possible responses for a scalar field are enumerable. GraphQL offers an Enum type in those cases, where the type specifies the space of valid responses.</p>
+<p>Scalars and Enums form the leaves in response trees;
+the intermediate levels are Object types, which define a set of fields, where each field is another type in the system, allowing the definition of arbitrary type hierarchies.</p>
+<p>GraphQL supports two abstract types: interfaces and unions.</p>
+<p>An Interface defines a list of fields; Object types that implement that interface are guaranteed to implement those fields.
+Whenever the type system claims it will return an interface, it will return a valid implementing type.</p>
+<p>A Union defines a list of possible types; similar to interfaces, whenever the type system claims a union will be returned, one of the possible types will be returned.</p>
+<p>Finally, oftentimes it is useful to provide complex structs as inputs to GraphQL field arguments or variables; the Input Object type allows the schema to define exactly what data is expected.</p>
+
+</div>
+</div>
+</div>
+</aside></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13424,6 +13505,110 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introspection">Introspection<a class="anchor-link" href="#Introspection">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A GraphQL server supports introspection over its schema. 
+This schema is queried using GraphQL itself, creating a powerful platform for tool‐building.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Validation">Validation<a class="anchor-link" href="#Validation">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GraphQL does not just verify if a request is syntactically correct, 
+but also ensures that it is unambiguous and mistake‐free in the context of a given GraphQL schema.</p>
+<p>An invalid request is still technically executable, and will always produce a stable result as defined by 
+the algorithms in the Execution section, however that result may be ambiguous, surprising, or unexpected relative 
+to a request containing validation errors, so execution should only occur for valid requests.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Execution">Execution<a class="anchor-link" href="#Execution">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GraphQL generates a response from a request via execution.</p>
+<p>A request for execution consists of a few pieces of information:</p>
+<p>The schema to use, typically solely provided by the GraphQL service.
+A Document which must contain GraphQL OperationDefinition and may contain FragmentDefinition.
+Optionally: The name of the Operation in the Document to execute.
+Optionally: Values for any Variables defined by the Operation.
+An initial value corresponding to the root type being executed. 
+Conceptually, an initial value represents the “universe” of data available via a GraphQL Service. 
+It is common for a GraphQL Service to always use the same initial value for every request.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Response">Response<a class="anchor-link" href="#Response">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When a GraphQL server receives a request, it must return a well‐formed response. 
+The server’s response describes the result of executing the requested operation if successful, and
+describes any errors encountered during the request.</p>
+<p>A response may contain both a partial response as well as encountered errors in the case that a field error occurred
+on a field which was replaced with null.</p>
+
+</div>
+</div>
+</div>
+</aside><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A GraphQL Document describes a complete file or request string operated on by a GraphQL service or client.
+A document contains multiple definitions, either executable or representative of a GraphQL type system.</p>
+
+</div>
+</div>
+</div>
+</aside>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/thats-enough.webp" alt="thats enough"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13517,40 +13702,13 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">Insert</span> <span class="n">code</span> <span class="n">slide</span> <span class="n">here</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-3-d7468a27308a&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    [Insert code slide here]mm</span>
-               ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://localhost:4545">http://localhost:4545</a></p>
 
 </div>
 </div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13564,6 +13722,13 @@ Image @peggyrayzis</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="./images/graphql-playground.png" alt="graphql-playground"></p>
 
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Apollo-Extension">Apollo Extension<a class="anchor-link" href="#Apollo-Extension">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13632,57 +13797,37 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">React</span><span class="o">/</span><span class="n">Next</span><span class="o">.</span><span class="n">js</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>React/Next.js</p>
 
-    </div>
 </div>
 </div>
-
 </div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Apollo</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Apollo</p>
 
-    </div>
 </div>
 </div>
-
 </div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">GraphQL</span> <span class="n">Yoga</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GraphQL Yoga</p>
 
-    </div>
 </div>
 </div>
-
 </div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Prisma</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Prisma</p>
 
-    </div>
 </div>
 </div>
-
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13699,18 +13844,13 @@ Image @peggyrayzis</p>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ServerSide</span> <span class="n">rendering</span><span class="p">,</span> <span class="n">PWA</span><span class="p">,</span> <span class="n">Mobile</span> <span class="n">Apps</span><span class="p">,</span> <span class="n">Desktop</span> <span class="n">Apps</span><span class="p">,</span> <span class="n">Static</span> <span class="n">websites</span> 
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ServerSide rendering, PWA, Mobile Apps, Desktop Apps, Static websites</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 </aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -13728,18 +13868,12 @@ Image @peggyrayzis</p>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the extension</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Show-the-extension">Show the extension<a class="anchor-link" href="#Show-the-extension">&#182;</a></h1>
 </div>
 </div>
-
 </div>
 </aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -13757,18 +13891,12 @@ Image @peggyrayzis</p>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the GraphQL Playground</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Show-the-GraphQL-Playground">Show the GraphQL Playground<a class="anchor-link" href="#Show-the-GraphQL-Playground">&#182;</a></h1>
 </div>
 </div>
-
 </div>
 </aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -13793,34 +13921,23 @@ Image @peggyrayzis</p>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Access</span><span class="p">:</span> <span class="n">Type</span><span class="o">-</span><span class="n">safe</span> <span class="n">database</span> <span class="n">access</span> <span class="k">with</span> <span class="n">the</span> <span class="n">auto</span><span class="o">-</span><span class="n">generated</span> <span class="n">Prisma</span> <span class="n">client</span> <span class="p">(</span><span class="ow">in</span> <span class="n">JavaScript</span><span class="p">,</span> <span class="n">TypeScript</span><span class="p">,</span> <span class="n">Go</span><span class="p">)</span>
-<span class="n">Migrate</span><span class="p">:</span> <span class="n">Declarative</span> <span class="n">data</span> <span class="n">modelling</span> <span class="ow">and</span> <span class="n">migrations</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span>
-<span class="n">Manage</span><span class="p">:</span> <span class="n">Visual</span> <span class="n">data</span> <span class="n">management</span> <span class="k">with</span> <span class="n">Prisma</span> <span class="n">Admin</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Access: Type-safe database access with the auto-generated Prisma client (in JavaScript, TypeScript, Go)
+Migrate: Declarative data modelling and migrations (optional)
+Manage: Visual data management with Prisma Admin</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 </aside></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s dive into code</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Let's-dive-into-code">Let's dive into code<a class="anchor-link" href="#Let's-dive-into-code">&#182;</a></h1>
 </div>
 </div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13829,18 +13946,12 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backend Data definition</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Backend-Data-definition">Backend Data definition<a class="anchor-link" href="#Backend-Data-definition">&#182;</a></h1>
 </div>
 </div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13860,46 +13971,35 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">*</span> <span class="o">-</span> <span class="n">Prisma</span> <span class="n">definition</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><ul>
+<li>Prisma definition</li>
+</ul>
+</li>
+</ul>
 
-    </div>
 </div>
 </div>
-
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Model</span> <span class="n">definition</span> <span class="ow">is</span> <span class="n">nearly</span> <span class="n">same</span> <span class="n">there</span> <span class="n">are</span> <span class="n">some</span> <span class="n">utilities</span> <span class="n">provided</span> <span class="n">by</span> <span class="n">the</span> <span class="n">abstraction</span> <span class="n">layer</span><span class="o">.</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Model definition is nearly same there are some utilities provided by the abstraction layer.</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 </aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backend GraphQL Server</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Backend-GraphQL-Server">Backend GraphQL Server<a class="anchor-link" href="#Backend-GraphQL-Server">&#182;</a></h1>
 </div>
 </div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13933,40 +14033,29 @@ Image @peggyrayzis</p>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">respond</span> <span class="n">to</span> <span class="n">queries</span><span class="p">,</span> <span class="n">a</span> <span class="n">schema</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">have</span> <span class="n">resolve</span> <span class="n">functions</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">fields</span><span class="o">.</span>
-<span class="n">Resolve</span> <span class="n">functions</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">included</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">GraphQL</span> <span class="n">schema</span> <span class="n">language</span><span class="p">,</span> <span class="n">so</span> <span class="n">they</span> <span class="n">must</span> <span class="n">be</span> <span class="n">added</span> <span class="n">separately</span><span class="o">.</span>
-<span class="n">This</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">functions</span> <span class="ow">is</span> <span class="n">called</span> <span class="n">the</span> <span class="s2">&quot;resolver map&quot;</span><span class="o">.</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to respond to queries, a schema needs to have resolve functions for all fields.
+Resolve functions cannot be included in the GraphQL schema language, so they must be added separately.
+This collection of functions is called the "resolver map".</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 </aside></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="err">```</span>
-  <span class="k">async</span> <span class="n">items</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">If</span> <span class="n">you</span> <span class="n">see</span> <span class="ow">in</span> <span class="n">prisma</span><span class="o">.</span><span class="n">graphql</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">Query</span> <span class="n">but</span> <span class="n">here</span> <span class="n">we</span> <span class="n">using</span> <span class="n">query</span>
-    <span class="n">const</span> <span class="n">items</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">info</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">items</span><span class="p">;</span>
-  <span class="p">},</span>
-<span class="err">```</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 
-    </div>
+<pre><code>  async items(parent, args, ctx, info) {
+    // If you see in prisma.graphql there is Query but here we using query
+    const items = await ctx.db.query.items(args, info);
+    return items;
+  },</code></pre>
+
 </div>
 </div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13976,35 +14065,24 @@ Image @peggyrayzis</p>
 </div>
 </div><aside class="notes">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obj</span><span class="p">:</span> <span class="n">The</span> <span class="nb">object</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">result</span> <span class="n">returned</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">resolver</span> <span class="n">on</span> <span class="n">the</span> <span class="n">parent</span> <span class="n">field</span><span class="p">,</span> <span class="ow">or</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">case</span> <span class="n">of</span> <span class="n">a</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">Query</span> <span class="n">field</span><span class="p">,</span> <span class="n">the</span> <span class="n">rootValue</span> <span class="n">passed</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">server</span> <span class="n">configuration</span><span class="o">.</span> <span class="n">This</span> <span class="n">argument</span> <span class="n">enables</span> <span class="n">the</span> <span class="n">nested</span> <span class="n">nature</span> <span class="n">of</span> <span class="n">GraphQL</span> <span class="n">queries</span><span class="o">.</span>
-<span class="n">args</span><span class="p">:</span> <span class="n">An</span> <span class="nb">object</span> <span class="k">with</span> <span class="n">the</span> <span class="n">arguments</span> <span class="n">passed</span> <span class="n">into</span> <span class="n">the</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">query</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="n">field</span> <span class="n">was</span> <span class="n">called</span> <span class="k">with</span> <span class="n">author</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Ada&quot;</span><span class="p">),</span> <span class="n">the</span> <span class="n">args</span> <span class="nb">object</span> <span class="n">would</span> <span class="n">be</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ada&quot;</span> <span class="p">}</span><span class="o">.</span>
-<span class="n">context</span><span class="p">:</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="nb">object</span> <span class="n">shared</span> <span class="n">by</span> <span class="nb">all</span> <span class="n">resolvers</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">particular</span> <span class="n">query</span><span class="p">,</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">contain</span> <span class="n">per</span><span class="o">-</span><span class="n">request</span> <span class="n">state</span><span class="p">,</span> <span class="n">including</span> <span class="n">authentication</span> <span class="n">information</span><span class="p">,</span> <span class="n">dataloader</span> <span class="n">instances</span><span class="p">,</span> <span class="ow">and</span> <span class="n">anything</span> <span class="k">else</span> <span class="n">that</span> <span class="n">should</span> <span class="n">be</span> <span class="n">taken</span> <span class="n">into</span> <span class="n">account</span> <span class="n">when</span> <span class="n">resolving</span> <span class="n">the</span> <span class="n">query</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span><span class="s1">&#39;re using Apollo Server, read about how to set the context in the setup documentation.</span>
-<span class="n">info</span><span class="p">:</span> <span class="n">This</span> <span class="n">argument</span> <span class="n">should</span> <span class="n">only</span> <span class="n">be</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">advanced</span> <span class="n">cases</span><span class="p">,</span> <span class="n">but</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">information</span> <span class="n">about</span> <span class="n">the</span> <span class="n">execution</span> <span class="n">state</span> <span class="n">of</span> <span class="n">the</span> <span class="n">query</span><span class="p">,</span> <span class="n">including</span> <span class="n">the</span> <span class="n">field</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">field</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">root</span><span class="p">,</span> <span class="ow">and</span> <span class="n">more</span><span class="o">.</span> <span class="n">It</span><span class="s1">&#39;s only documented in the GraphQL.js source code.</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>obj: The object that contains the result returned from the resolver on the parent field, or, in the case of a top-level Query field, the rootValue passed from the server configuration. This argument enables the nested nature of GraphQL queries.
+args: An object with the arguments passed into the field in the query. For example, if the field was called with author(name: "Ada"), the args object would be: { "name": "Ada" }.
+context: This is an object shared by all resolvers in a particular query, and is used to contain per-request state, including authentication information, dataloader instances, and anything else that should be taken into account when resolving the query. If you're using Apollo Server, read about how to set the context in the setup documentation.
+info: This argument should only be used in advanced cases, but it contains information about the execution state of the query, including the field name, path to the field from the root, and more. It's only documented in the GraphQL.js source code.</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 </aside></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Frontend</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Frontend">Frontend<a class="anchor-link" href="#Frontend">&#182;</a></h1>
 </div>
 </div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14014,18 +14092,12 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Frontend Querying</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Frontend-Querying">Frontend Querying<a class="anchor-link" href="#Frontend-Querying">&#182;</a></h1>
 </div>
 </div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14035,18 +14107,12 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Frontend Fetching &amp; Rendering</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Frontend-Fetching-&amp;-Rendering">Frontend Fetching &amp; Rendering<a class="anchor-link" href="#Frontend-Fetching-&amp;-Rendering">&#182;</a></h1>
 </div>
 </div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14056,18 +14122,12 @@ Image @peggyrayzis</p>
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How to start the server?</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-start-the-server?">How to start the server?<a class="anchor-link" href="#How-to-start-the-server?">&#182;</a></h1>
 </div>
 </div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14083,371 +14143,44 @@ Image @peggyrayzis</p>
 <h1 id="GraphQL-Intermediate-Walk-Through">GraphQL Intermediate Walk Through<a class="anchor-link" href="#GraphQL-Intermediate-Walk-Through">&#182;</a></h1>
 </div>
 </div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="n">GraphQL</span> <span class="n">Document</span> <span class="n">describes</span> <span class="n">a</span> <span class="n">complete</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">request</span> <span class="n">string</span> <span class="n">operated</span> <span class="n">on</span> <span class="n">by</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">service</span> <span class="ow">or</span> <span class="n">client</span><span class="o">.</span>
-<span class="n">A</span> <span class="n">document</span> <span class="n">contains</span> <span class="n">multiple</span> <span class="n">definitions</span><span class="p">,</span> <span class="n">either</span> <span class="n">executable</span> <span class="ow">or</span> <span class="n">representative</span> <span class="n">of</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="nb">type</span> <span class="n">system</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="TypeDefinition">TypeDefinition<a class="anchor-link" href="#TypeDefinition">&#182;</a></h2><h3 id="ScalarTypeDefinition">ScalarTypeDefinition<a class="anchor-link" href="#ScalarTypeDefinition">&#182;</a></h3><h3 id="ObjectTypeDefinition">ObjectTypeDefinition<a class="anchor-link" href="#ObjectTypeDefinition">&#182;</a></h3><h3 id="InterfaceTypeDefinition">InterfaceTypeDefinition<a class="anchor-link" href="#InterfaceTypeDefinition">&#182;</a></h3><h3 id="UnionTypeDefinition">UnionTypeDefinition<a class="anchor-link" href="#UnionTypeDefinition">&#182;</a></h3><h3 id="EnumTypeDefinition">EnumTypeDefinition<a class="anchor-link" href="#EnumTypeDefinition">&#182;</a></h3><h3 id="InputObjectTypeDefinition">InputObjectTypeDefinition<a class="anchor-link" href="#InputObjectTypeDefinition">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Enum Type</span>
-<span class="err">```</span>
-<span class="n">enum</span> <span class="n">Episode</span> <span class="p">{</span>
-  <span class="n">NEWHOPE</span>
-  <span class="n">EMPIRE</span>
-  <span class="n">JEDI</span>
-<span class="p">}</span>
-<span class="err">```</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Interface">Interface<a class="anchor-link" href="#Interface">&#182;</a></h2>
-<pre><code>interface Character {
-  id: ID!
-  name: String!
-  friends: [Character]
-  appearsIn: [Episode]!
-}</code></pre>
-
+<h1 id="Advanced-topics">Advanced topics<a class="anchor-link" href="#Advanced-topics">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Union-Type">Union Type<a class="anchor-link" href="#Union-Type">&#182;</a></h3>
-<pre><code>union SearchResult = Human | Droid | Starship</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Input-Type">Input Type<a class="anchor-link" href="#Input-Type">&#182;</a></h3>
-<pre><code>input ReviewInput {
-  stars: Int!
-  commentary: String
-}</code></pre>
-
+<h1 id="User-Login">User Login<a class="anchor-link" href="#User-Login">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using it like</p>
-
-<pre><code>mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
-  createReview(episode: $ep, review: $review) {
-    stars
-    commentary
-  }
-}</code></pre>
-
+<h2 id="Code-In-Editor">Code In Editor<a class="anchor-link" href="#Code-In-Editor">&#182;</a></h2>
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Types</span>
-<span class="o">---</span>
-
-<span class="o">+</span> <span class="n">Scalar</span>
-<span class="o">+</span> <span class="n">Variable</span>
-<span class="o">+</span> <span class="n">IntValue</span>
-<span class="o">+</span> <span class="n">FloatValue</span>
-<span class="o">+</span> <span class="n">StringValue</span>
-<span class="o">+</span> <span class="n">BooleanValue</span>
-
-<span class="o">+</span> <span class="n">NullValue</span>
-<span class="o">+</span> <span class="n">EnumValue</span>
-<span class="o">+</span> <span class="n">ListValueConst</span>
-<span class="o">+</span> <span class="n">ObjectVal</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><aside class="notes">
-
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TypeSystemDefinition</p>
-<p>SchemaDefinition</p>
-<p>TypeDefinition</p>
-<p>DirectiveDefinition</p>
+<h2 id="Live-Demo-&#128293;&#128293;&#128293;">Live Demo &#128293;&#128293;&#128293;<a class="anchor-link" href="#Live-Demo-&#128293;&#128293;&#128293;">&#182;</a></h2>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
+<li><a href="https://graphql.github.io/graphql-spec/draft">https://graphql.github.io/graphql-spec/draft</a></li>
+</ul>
 
 </div>
 </div>
-</div>
-</aside><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">The</span> <span class="n">fundamental</span> <span class="n">unit</span> <span class="n">of</span> <span class="nb">any</span> <span class="n">GraphQL</span> <span class="n">Schema</span> <span class="ow">is</span> <span class="n">the</span> <span class="nb">type</span><span class="o">.</span>
-<span class="n">There</span> <span class="n">are</span> <span class="n">six</span> <span class="n">kinds</span> <span class="n">of</span> <span class="n">named</span> <span class="nb">type</span> <span class="n">definitions</span> <span class="ow">in</span> <span class="n">GraphQL</span><span class="p">,</span> <span class="ow">and</span> <span class="n">two</span> <span class="n">wrapping</span> <span class="n">types</span><span class="o">.</span>
-
-<span class="n">The</span> <span class="n">most</span> <span class="n">basic</span> <span class="nb">type</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Scalar</span><span class="o">.</span> 
-<span class="n">A</span> <span class="n">scalar</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">primitive</span> <span class="n">value</span><span class="p">,</span> <span class="n">like</span> <span class="n">a</span> <span class="n">string</span> <span class="ow">or</span> <span class="n">an</span> <span class="n">integer</span><span class="o">.</span> <span class="n">Oftentimes</span><span class="p">,</span> <span class="n">the</span> <span class="n">possible</span> <span class="n">responses</span> <span class="k">for</span> <span class="n">a</span> <span class="n">scalar</span> <span class="n">field</span> <span class="n">are</span> <span class="n">enumerable</span><span class="o">.</span> <span class="n">GraphQL</span> <span class="n">offers</span> <span class="n">an</span> <span class="n">Enum</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">those</span> <span class="n">cases</span><span class="p">,</span> <span class="n">where</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">specifies</span> <span class="n">the</span> <span class="n">space</span> <span class="n">of</span> <span class="n">valid</span> <span class="n">responses</span><span class="o">.</span>
-
-<span class="n">Scalars</span> <span class="ow">and</span> <span class="n">Enums</span> <span class="n">form</span> <span class="n">the</span> <span class="n">leaves</span> <span class="ow">in</span> <span class="n">response</span> <span class="n">trees</span><span class="p">;</span>
-<span class="n">the</span> <span class="n">intermediate</span> <span class="n">levels</span> <span class="n">are</span> <span class="n">Object</span> <span class="n">types</span><span class="p">,</span> <span class="n">which</span> <span class="n">define</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">fields</span><span class="p">,</span> <span class="n">where</span> <span class="n">each</span> <span class="n">field</span> <span class="ow">is</span> <span class="n">another</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">system</span><span class="p">,</span> <span class="n">allowing</span> <span class="n">the</span> <span class="n">definition</span> <span class="n">of</span> <span class="n">arbitrary</span> <span class="nb">type</span> <span class="n">hierarchies</span><span class="o">.</span>
-
-<span class="n">GraphQL</span> <span class="n">supports</span> <span class="n">two</span> <span class="n">abstract</span> <span class="n">types</span><span class="p">:</span> <span class="n">interfaces</span> <span class="ow">and</span> <span class="n">unions</span><span class="o">.</span>
-
-<span class="n">An</span> <span class="n">Interface</span> <span class="n">defines</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">fields</span><span class="p">;</span> <span class="n">Object</span> <span class="n">types</span> <span class="n">that</span> <span class="n">implement</span> <span class="n">that</span> <span class="n">interface</span> <span class="n">are</span> <span class="n">guaranteed</span> <span class="n">to</span> <span class="n">implement</span> <span class="n">those</span> <span class="n">fields</span><span class="o">.</span>
-<span class="n">Whenever</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">system</span> <span class="n">claims</span> <span class="n">it</span> <span class="n">will</span> <span class="k">return</span> <span class="n">an</span> <span class="n">interface</span><span class="p">,</span> <span class="n">it</span> <span class="n">will</span> <span class="k">return</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">implementing</span> <span class="nb">type</span><span class="o">.</span>
-
-<span class="n">A</span> <span class="n">Union</span> <span class="n">defines</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">possible</span> <span class="n">types</span><span class="p">;</span> <span class="n">similar</span> <span class="n">to</span> <span class="n">interfaces</span><span class="p">,</span> <span class="n">whenever</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">system</span> <span class="n">claims</span> <span class="n">a</span> <span class="n">union</span> <span class="n">will</span> <span class="n">be</span> <span class="n">returned</span><span class="p">,</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">possible</span> <span class="n">types</span> <span class="n">will</span> <span class="n">be</span> <span class="n">returned</span><span class="o">.</span>
-
-<span class="n">Finally</span><span class="p">,</span> <span class="n">oftentimes</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">useful</span> <span class="n">to</span> <span class="n">provide</span> <span class="nb">complex</span> <span class="n">structs</span> <span class="k">as</span> <span class="n">inputs</span> <span class="n">to</span> <span class="n">GraphQL</span> <span class="n">field</span> <span class="n">arguments</span> <span class="ow">or</span> <span class="n">variables</span><span class="p">;</span> <span class="n">the</span> <span class="n">Input</span> <span class="n">Object</span> <span class="nb">type</span> <span class="n">allows</span> <span class="n">the</span> <span class="n">schema</span> <span class="n">to</span> <span class="n">define</span> <span class="n">exactly</span> <span class="n">what</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">expected</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Advanced topics</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Schema &amp; Types</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Directives</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="n">GraphQL</span> <span class="n">schema</span> <span class="n">describes</span> <span class="n">directives</span> <span class="n">which</span> <span class="n">are</span> <span class="n">used</span> <span class="n">to</span> <span class="n">annotate</span> <span class="n">various</span> <span class="n">parts</span> <span class="n">of</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">document</span> <span class="k">as</span> <span class="n">an</span> <span class="n">indicator</span> 
-<span class="n">that</span> <span class="n">they</span> <span class="n">should</span> <span class="n">be</span> <span class="n">evaluated</span> <span class="n">differently</span> <span class="n">by</span> <span class="n">a</span> <span class="n">validator</span><span class="p">,</span> <span class="n">executor</span><span class="p">,</span> <span class="ow">or</span> <span class="n">client</span> <span class="n">tool</span> <span class="n">such</span> <span class="k">as</span> <span class="n">a</span> <span class="n">code</span> <span class="n">generator</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Introspection</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="n">GraphQL</span> <span class="n">server</span> <span class="n">supports</span> <span class="n">introspection</span> <span class="n">over</span> <span class="n">its</span> <span class="n">schema</span><span class="o">.</span> 
-<span class="n">This</span> <span class="n">schema</span> <span class="ow">is</span> <span class="n">queried</span> <span class="n">using</span> <span class="n">GraphQL</span> <span class="n">itself</span><span class="p">,</span> <span class="n">creating</span> <span class="n">a</span> <span class="n">powerful</span> <span class="n">platform</span> <span class="k">for</span> <span class="n">tool</span><span class="err">‐</span><span class="n">building</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Validation</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">GraphQL</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">just</span> <span class="n">verify</span> <span class="k">if</span> <span class="n">a</span> <span class="n">request</span> <span class="ow">is</span> <span class="n">syntactically</span> <span class="n">correct</span><span class="p">,</span> 
-<span class="n">but</span> <span class="n">also</span> <span class="n">ensures</span> <span class="n">that</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">unambiguous</span> <span class="ow">and</span> <span class="n">mistake</span><span class="err">‐</span><span class="n">free</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">context</span> <span class="n">of</span> <span class="n">a</span> <span class="n">given</span> <span class="n">GraphQL</span> <span class="n">schema</span><span class="o">.</span>
-
-<span class="n">An</span> <span class="n">invalid</span> <span class="n">request</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">technically</span> <span class="n">executable</span><span class="p">,</span> <span class="ow">and</span> <span class="n">will</span> <span class="n">always</span> <span class="n">produce</span> <span class="n">a</span> <span class="n">stable</span> <span class="n">result</span> <span class="k">as</span> <span class="n">defined</span> <span class="n">by</span> 
-<span class="n">the</span> <span class="n">algorithms</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Execution</span> <span class="n">section</span><span class="p">,</span> <span class="n">however</span> <span class="n">that</span> <span class="n">result</span> <span class="n">may</span> <span class="n">be</span> <span class="n">ambiguous</span><span class="p">,</span> <span class="n">surprising</span><span class="p">,</span> <span class="ow">or</span> <span class="n">unexpected</span> <span class="n">relative</span> 
-<span class="n">to</span> <span class="n">a</span> <span class="n">request</span> <span class="n">containing</span> <span class="n">validation</span> <span class="n">errors</span><span class="p">,</span> <span class="n">so</span> <span class="n">execution</span> <span class="n">should</span> <span class="n">only</span> <span class="n">occur</span> <span class="k">for</span> <span class="n">valid</span> <span class="n">requests</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Execution</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">GraphQL</span> <span class="n">generates</span> <span class="n">a</span> <span class="n">response</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">request</span> <span class="n">via</span> <span class="n">execution</span><span class="o">.</span>
-
-<span class="n">A</span> <span class="n">request</span> <span class="k">for</span> <span class="n">execution</span> <span class="n">consists</span> <span class="n">of</span> <span class="n">a</span> <span class="n">few</span> <span class="n">pieces</span> <span class="n">of</span> <span class="n">information</span><span class="p">:</span>
-
-<span class="n">The</span> <span class="n">schema</span> <span class="n">to</span> <span class="n">use</span><span class="p">,</span> <span class="n">typically</span> <span class="n">solely</span> <span class="n">provided</span> <span class="n">by</span> <span class="n">the</span> <span class="n">GraphQL</span> <span class="n">service</span><span class="o">.</span>
-<span class="n">A</span> <span class="n">Document</span> <span class="n">which</span> <span class="n">must</span> <span class="n">contain</span> <span class="n">GraphQL</span> <span class="n">OperationDefinition</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">contain</span> <span class="n">FragmentDefinition</span><span class="o">.</span>
-<span class="n">Optionally</span><span class="p">:</span> <span class="n">The</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Operation</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Document</span> <span class="n">to</span> <span class="n">execute</span><span class="o">.</span>
-<span class="n">Optionally</span><span class="p">:</span> <span class="n">Values</span> <span class="k">for</span> <span class="nb">any</span> <span class="n">Variables</span> <span class="n">defined</span> <span class="n">by</span> <span class="n">the</span> <span class="n">Operation</span><span class="o">.</span>
-<span class="n">An</span> <span class="n">initial</span> <span class="n">value</span> <span class="n">corresponding</span> <span class="n">to</span> <span class="n">the</span> <span class="n">root</span> <span class="nb">type</span> <span class="n">being</span> <span class="n">executed</span><span class="o">.</span> 
-<span class="n">Conceptually</span><span class="p">,</span> <span class="n">an</span> <span class="n">initial</span> <span class="n">value</span> <span class="n">represents</span> <span class="n">the</span> <span class="err">“</span><span class="n">universe</span><span class="err">”</span> <span class="n">of</span> <span class="n">data</span> <span class="n">available</span> <span class="n">via</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">Service</span><span class="o">.</span> 
-<span class="n">It</span> <span class="ow">is</span> <span class="n">common</span> <span class="k">for</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">Service</span> <span class="n">to</span> <span class="n">always</span> <span class="n">use</span> <span class="n">the</span> <span class="n">same</span> <span class="n">initial</span> <span class="n">value</span> <span class="k">for</span> <span class="n">every</span> <span class="n">request</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Response</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">When</span> <span class="n">a</span> <span class="n">GraphQL</span> <span class="n">server</span> <span class="n">receives</span> <span class="n">a</span> <span class="n">request</span><span class="p">,</span> <span class="n">it</span> <span class="n">must</span> <span class="k">return</span> <span class="n">a</span> <span class="n">well</span><span class="err">‐</span><span class="n">formed</span> <span class="n">response</span><span class="o">.</span> 
-<span class="n">The</span> <span class="n">server</span><span class="err">’</span><span class="n">s</span> <span class="n">response</span> <span class="n">describes</span> <span class="n">the</span> <span class="n">result</span> <span class="n">of</span> <span class="n">executing</span> <span class="n">the</span> <span class="n">requested</span> <span class="n">operation</span> <span class="k">if</span> <span class="n">successful</span><span class="p">,</span> <span class="ow">and</span>
-<span class="n">describes</span> <span class="nb">any</span> <span class="n">errors</span> <span class="n">encountered</span> <span class="n">during</span> <span class="n">the</span> <span class="n">request</span><span class="o">.</span>
-
-<span class="n">A</span> <span class="n">response</span> <span class="n">may</span> <span class="n">contain</span> <span class="n">both</span> <span class="n">a</span> <span class="n">partial</span> <span class="n">response</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">encountered</span> <span class="n">errors</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">case</span> <span class="n">that</span> <span class="n">a</span> <span class="n">field</span> <span class="n">error</span> <span class="n">occurred</span>
-<span class="n">on</span> <span class="n">a</span> <span class="n">field</span> <span class="n">which</span> <span class="n">was</span> <span class="n">replaced</span> <span class="k">with</span> <span class="n">null</span><span class="o">.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## References</span>
-<span class="o">+</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">graphql</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">graphql</span><span class="o">-</span><span class="n">spec</span><span class="o">/</span><span class="n">draft</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14455,7 +14188,7 @@ Image @peggyrayzis</p>
 <h1 id="HomeWork">HomeWork<a class="anchor-link" href="#HomeWork">&#182;</a></h1>
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14465,7 +14198,17 @@ alt="GraphQL Documentary" width="720" height="640" border="10" /></a></p>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://www.youtube.com/watch?v=ADEav6zlDjg
+" target="_blank"><img src="http://img.youtube.com/vi/ADEav6zlDjg/0.jpg" 
+alt="GraphQL Documentary" width="720" height="640" border="10" /></a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14473,23 +14216,17 @@ alt="GraphQL Documentary" width="720" height="640" border="10" /></a></p>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Thank you</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#128104;&#8205;&#128187;-Gaurav-Sehrawat">&#128104;&#8205;&#128187; Gaurav Sehrawat<a class="anchor-link" href="#&#128104;&#8205;&#128187;-Gaurav-Sehrawat">&#182;</a></h1><h1 id="&#128376;Full-Stack-Developer">&#128376;Full Stack Developer<a class="anchor-link" href="#&#128376;Full-Stack-Developer">&#182;</a></h1><h1 id="&#128187;-Dimebox/Verifone">&#128187; Dimebox/Verifone<a class="anchor-link" href="#&#128187;-Dimebox/Verifone">&#182;</a></h1><h1 id="Github:-igauravsehrawat">Github: <a href="https://github.com/igauravsehrawat">igauravsehrawat</a><a class="anchor-link" href="#Github:-igauravsehrawat">&#182;</a></h1><h1 id="Twitter:-root3d">Twitter: <a href="https://twitter.com/root3d">root3d</a><a class="anchor-link" href="#Twitter:-root3d">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Thank-you">Thank you<a class="anchor-link" href="#Thank-you">&#182;</a></h1>
 </div>
 </div>
 </div></section></section>

@@ -13411,201 +13411,7 @@ Image @peggyrayzis</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="TypeDefinition">TypeDefinition<a class="anchor-link" href="#TypeDefinition">&#182;</a></h2><h3 id="ScalarTypeDefinition">ScalarTypeDefinition<a class="anchor-link" href="#ScalarTypeDefinition">&#182;</a></h3><h3 id="ObjectTypeDefinition">ObjectTypeDefinition<a class="anchor-link" href="#ObjectTypeDefinition">&#182;</a></h3><h3 id="InterfaceTypeDefinition">InterfaceTypeDefinition<a class="anchor-link" href="#InterfaceTypeDefinition">&#182;</a></h3><h3 id="UnionTypeDefinition">UnionTypeDefinition<a class="anchor-link" href="#UnionTypeDefinition">&#182;</a></h3><h3 id="EnumTypeDefinition">EnumTypeDefinition<a class="anchor-link" href="#EnumTypeDefinition">&#182;</a></h3><h3 id="InputObjectTypeDefinition">InputObjectTypeDefinition<a class="anchor-link" href="#InputObjectTypeDefinition">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Enum-Type">Enum Type<a class="anchor-link" href="#Enum-Type">&#182;</a></h2>
-<pre><code>enum Episode {
-  NEWHOPE
-  EMPIRE
-  JEDI
-}</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Interface">Interface<a class="anchor-link" href="#Interface">&#182;</a></h2>
-<pre><code>interface Character {
-  id: ID!
-  name: String!
-  friends: [Character]
-  appearsIn: [Episode]!
-}</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Union-Type">Union Type<a class="anchor-link" href="#Union-Type">&#182;</a></h3>
-<pre><code>union SearchResult = Human | Droid | Starship</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Input-Type">Input Type<a class="anchor-link" href="#Input-Type">&#182;</a></h3>
-<pre><code>input ReviewInput {
-  stars: Int!
-  commentary: String
-}</code></pre>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using it like</p>
-
-<pre><code>mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
-  createReview(episode: $ep, review: $review) {
-    stars
-    commentary
-  }
-}</code></pre>
-
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The fundamental unit of any GraphQL Schema is the type.
-There are six kinds of named type definitions in GraphQL, and two wrapping types.</p>
-<p>The most basic type is a Scalar. 
-A scalar represents a primitive value, like a string or an integer. Oftentimes, the possible responses for a scalar field are enumerable. GraphQL offers an Enum type in those cases, where the type specifies the space of valid responses.</p>
-<p>Scalars and Enums form the leaves in response trees;
-the intermediate levels are Object types, which define a set of fields, where each field is another type in the system, allowing the definition of arbitrary type hierarchies.</p>
-<p>GraphQL supports two abstract types: interfaces and unions.</p>
-<p>An Interface defines a list of fields; Object types that implement that interface are guaranteed to implement those fields.
-Whenever the type system claims it will return an interface, it will return a valid implementing type.</p>
-<p>A Union defines a list of possible types; similar to interfaces, whenever the type system claims a union will be returned, one of the possible types will be returned.</p>
-<p>Finally, oftentimes it is useful to provide complex structs as inputs to GraphQL field arguments or variables; the Input Object type allows the schema to define exactly what data is expected.</p>
-
-</div>
-</div>
-</div>
-</aside></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Query">Query<a class="anchor-link" href="#Query">&#182;</a></h2><h2 id="Mutation">Mutation<a class="anchor-link" href="#Mutation">&#182;</a></h2><h2 id="Subscriptions">Subscriptions<a class="anchor-link" href="#Subscriptions">&#182;</a></h2>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introspection">Introspection<a class="anchor-link" href="#Introspection">&#182;</a></h1>
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A GraphQL server supports introspection over its schema. 
-This schema is queried using GraphQL itself, creating a powerful platform for tool‐building.</p>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Validation">Validation<a class="anchor-link" href="#Validation">&#182;</a></h1>
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>GraphQL does not just verify if a request is syntactically correct, 
-but also ensures that it is unambiguous and mistake‐free in the context of a given GraphQL schema.</p>
-<p>An invalid request is still technically executable, and will always produce a stable result as defined by 
-the algorithms in the Execution section, however that result may be ambiguous, surprising, or unexpected relative 
-to a request containing validation errors, so execution should only occur for valid requests.</p>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Execution">Execution<a class="anchor-link" href="#Execution">&#182;</a></h1>
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>GraphQL generates a response from a request via execution.</p>
-<p>A request for execution consists of a few pieces of information:</p>
-<p>The schema to use, typically solely provided by the GraphQL service.
-A Document which must contain GraphQL OperationDefinition and may contain FragmentDefinition.
-Optionally: The name of the Operation in the Document to execute.
-Optionally: Values for any Variables defined by the Operation.
-An initial value corresponding to the root type being executed. 
-Conceptually, an initial value represents the “universe” of data available via a GraphQL Service. 
-It is common for a GraphQL Service to always use the same initial value for every request.</p>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Response">Response<a class="anchor-link" href="#Response">&#182;</a></h1>
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>When a GraphQL server receives a request, it must return a well‐formed response. 
-The server’s response describes the result of executing the requested operation if successful, and
-describes any errors encountered during the request.</p>
-<p>A response may contain both a partial response as well as encountered errors in the case that a field error occurred
-on a field which was replaced with null.</p>
-
-</div>
-</div>
-</div>
-</aside><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A GraphQL Document describes a complete file or request string operated on by a GraphQL service or client.
-A document contains multiple definitions, either executable or representative of a GraphQL type system.</p>
-
-</div>
-</div>
-</div>
-</aside>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/thats-enough.webp" alt="thats enough"></p>
-
 </div>
 </div>
 </div></section></section><section><section>
@@ -13713,6 +13519,200 @@ A document contains multiple definitions, either executable or representative of
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="TypeDefinition">TypeDefinition<a class="anchor-link" href="#TypeDefinition">&#182;</a></h2><h3 id="ScalarTypeDefinition">ScalarTypeDefinition<a class="anchor-link" href="#ScalarTypeDefinition">&#182;</a></h3><h3 id="ObjectTypeDefinition">ObjectTypeDefinition<a class="anchor-link" href="#ObjectTypeDefinition">&#182;</a></h3><h3 id="InterfaceTypeDefinition">InterfaceTypeDefinition<a class="anchor-link" href="#InterfaceTypeDefinition">&#182;</a></h3><h3 id="UnionTypeDefinition">UnionTypeDefinition<a class="anchor-link" href="#UnionTypeDefinition">&#182;</a></h3><h3 id="EnumTypeDefinition">EnumTypeDefinition<a class="anchor-link" href="#EnumTypeDefinition">&#182;</a></h3><h3 id="InputObjectTypeDefinition">InputObjectTypeDefinition<a class="anchor-link" href="#InputObjectTypeDefinition">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Enum-Type">Enum Type<a class="anchor-link" href="#Enum-Type">&#182;</a></h2>
+<pre><code>enum Episode {
+  NEWHOPE
+  EMPIRE
+  JEDI
+}</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Interface">Interface<a class="anchor-link" href="#Interface">&#182;</a></h2>
+<pre><code>interface Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  appearsIn: [Episode]!
+}</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Union-Type">Union Type<a class="anchor-link" href="#Union-Type">&#182;</a></h3>
+<pre><code>union SearchResult = Human | Droid | Starship</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Input-Type">Input Type<a class="anchor-link" href="#Input-Type">&#182;</a></h3>
+<pre><code>input ReviewInput {
+  stars: Int!
+  commentary: String
+}</code></pre>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using it like</p>
+
+<pre><code>mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    stars
+    commentary
+  }
+}</code></pre>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The fundamental unit of any GraphQL Schema is the type.
+There are six kinds of named type definitions in GraphQL, and two wrapping types.</p>
+<p>The most basic type is a Scalar. 
+A scalar represents a primitive value, like a string or an integer. Oftentimes, the possible responses for a scalar field are enumerable. GraphQL offers an Enum type in those cases, where the type specifies the space of valid responses.</p>
+<p>Scalars and Enums form the leaves in response trees;
+the intermediate levels are Object types, which define a set of fields, where each field is another type in the system, allowing the definition of arbitrary type hierarchies.</p>
+<p>GraphQL supports two abstract types: interfaces and unions.</p>
+<p>An Interface defines a list of fields; Object types that implement that interface are guaranteed to implement those fields.
+Whenever the type system claims it will return an interface, it will return a valid implementing type.</p>
+<p>A Union defines a list of possible types; similar to interfaces, whenever the type system claims a union will be returned, one of the possible types will be returned.</p>
+<p>Finally, oftentimes it is useful to provide complex structs as inputs to GraphQL field arguments or variables; the Input Object type allows the schema to define exactly what data is expected.</p>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introspection">Introspection<a class="anchor-link" href="#Introspection">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A GraphQL server supports introspection over its schema. 
+This schema is queried using GraphQL itself, creating a powerful platform for tool‐building.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Validation">Validation<a class="anchor-link" href="#Validation">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GraphQL does not just verify if a request is syntactically correct, 
+but also ensures that it is unambiguous and mistake‐free in the context of a given GraphQL schema.</p>
+<p>An invalid request is still technically executable, and will always produce a stable result as defined by 
+the algorithms in the Execution section, however that result may be ambiguous, surprising, or unexpected relative 
+to a request containing validation errors, so execution should only occur for valid requests.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Execution">Execution<a class="anchor-link" href="#Execution">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GraphQL generates a response from a request via execution.</p>
+<p>A request for execution consists of a few pieces of information:</p>
+<p>The schema to use, typically solely provided by the GraphQL service.
+A Document which must contain GraphQL OperationDefinition and may contain FragmentDefinition.
+Optionally: The name of the Operation in the Document to execute.
+Optionally: Values for any Variables defined by the Operation.
+An initial value corresponding to the root type being executed. 
+Conceptually, an initial value represents the “universe” of data available via a GraphQL Service. 
+It is common for a GraphQL Service to always use the same initial value for every request.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Response">Response<a class="anchor-link" href="#Response">&#182;</a></h1>
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When a GraphQL server receives a request, it must return a well‐formed response. 
+The server’s response describes the result of executing the requested operation if successful, and
+describes any errors encountered during the request.</p>
+<p>A response may contain both a partial response as well as encountered errors in the case that a field error occurred
+on a field which was replaced with null.</p>
+
+</div>
+</div>
+</div>
+</aside><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A GraphQL Document describes a complete file or request string operated on by a GraphQL service or client.
+A document contains multiple definitions, either executable or representative of a GraphQL type system.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/thats-enough.webp" alt="thats enough"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Practical-Stuff">Practical Stuff<a class="anchor-link" href="#Practical-Stuff">&#182;</a></h1>
 </div>
 </div>
@@ -13724,7 +13724,7 @@ A document contains multiple definitions, either executable or representative of
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13956,17 +13956,7 @@ Manage: Visual data management with Prisma Admin</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>type Item {
-  id: ID! @id
-  title: String!
-  description: String!
-  image: String!
-  largeImage: String!
-  price: Int!
-  createdAt: DateTime! @createdAt
-  updatedAt: DateTime! @updatedAt
-}</code></pre>
+<p><img src="./images/data-model-layer.png" alt="data model layer"></p>
 
 </div>
 </div>
@@ -14005,8 +13995,7 @@ Manage: Visual data management with Prisma Admin</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>GraphQL Query layer</p>
-
-<pre><code>items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]!</code></pre>
+<p><img src="./images/query-layer.png" alt="query layer"></p>
 
 </div>
 </div>
@@ -14047,12 +14036,7 @@ This collection of functions is called the "resolver map".</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>  async items(parent, args, ctx, info) {
-    // If you see in prisma.graphql there is Query but here we using query
-    const items = await ctx.db.query.items(args, info);
-    return items;
-  },</code></pre>
+<p><img src="./images/query-resolver-layer.png" alt="query resolver layer"></p>
 
 </div>
 </div>
@@ -14147,7 +14131,7 @@ info: This argument should only be used in advanced cases, but it contains infor
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Advanced-topics">Advanced topics<a class="anchor-link" href="#Advanced-topics">&#182;</a></h1>
+<h1 id="GraphQL-103">GraphQL 103<a class="anchor-link" href="#GraphQL-103">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>

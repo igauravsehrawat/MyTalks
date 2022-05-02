@@ -18,3 +18,9 @@
 
 ### [IT Development Cafe Amsterdam](https://www.meetup.com/IT-Development-Cafe/)
 + [Intro to GraphQL](https://igauravsehrawat.com/MyTalks/IT-Development-Cafe-Amsterdam/GraphQL-103.slides.html)
+
+### [React Amsterdam](https://www.meetup.com/React-Amsterdam/events/280959233/)
++ [Advanced Typescript](https://www.slideshare.net/GauravSehrawat1/typescript-magic)
+
+### [Sogeti Frontend](https://www.meetup.com/sogeti-frontend/events/284481633/)
++ [ROCA - Resource Oriented Client Architecture](https://igauravsehrawat.com/MyTalks/Front-End/ROCA.slides.html)

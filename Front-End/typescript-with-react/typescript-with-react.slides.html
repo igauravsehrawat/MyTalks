@@ -4994,7 +4994,7 @@ form{
   .bp3-running-text table th, table.bp3-html-table th{
     color:#182026;
     font-weight:600; }
-  
+
   .bp3-running-text table td,
   table.bp3-html-table td{
     color:#182026; }
@@ -14644,7 +14644,7 @@ div.jp-OutputPrompt {
     init_mathjax();
     </script>
     <!-- End of mathjax configuration --><!-- Reveal Theme -->
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/sky.css" id="theme">
 
 </head>
 
@@ -14840,7 +14840,7 @@ console.log('type', typeof amount);
 <h1 id="Type-Annotations">Type Annotations<a class="anchor-link" href="#Type-Annotations">&#182;</a></h1>
 <pre><code>let a: number;
 let b: string;</code></pre>
-<h1 id="Type-Interference">Type Interference<a class="anchor-link" href="#Type-Interference">&#182;</a></h1>
+<h1 id="Type-Inference">Type Inference<a class="anchor-link" href="#Type-Inference">&#182;</a></h1>
 <pre><code>let a = 10;
 const b = 10;
 const c = "small string"
@@ -14959,7 +14959,7 @@ if (typeof maybe === "string") {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Note:</p>
-<p>Type predicates are a special return type that signals to the Typescript compiler what type a particular value is. 
+<p>Type predicates are a special return type that signals to the Typescript compiler what type a particular value is.
 Type predicates are always attached to a function that takes a single argument and returns a boolean.</p>
 
 </div>
@@ -15125,9 +15125,9 @@ Hello.defaultProps = {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Type-With-Object-Prop">Type With Object Prop<a class="anchor-link" href="#Type-With-Object-Prop">&#182;</a></h1>
 <pre><code>type Address = {
-  line1: string; 
-  line2: string; 
-  state: string; 
+  line1: string;
+  line2: string;
+  state: string;
   zipcode: string;
 }
 type Who = {
@@ -15294,7 +15294,7 @@ type Actions = Increment | Decrement;</code></pre>
 
 <pre><code>const Counter = ( ... ) =&gt; {
   const [state, dispatch] = React.useReducer&lt;React.Reducer&lt;State, Actions&gt;&gt;(
-    reducer, 
+    reducer,
     { count: initialCount }
   );
 
@@ -15383,18 +15383,6 @@ function neverReached (never: never) {};</code></pre>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Let's-take-a-break-with-Memes">Let's take a break with Memes<a class="anchor-link" href="#Let's-take-a-break-with-Memes">&#182;</a></h1>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://pbs.twimg.com/media/DU_TdVlVoAE6zM_.jpg:large" alt="javascript"></p>
-
 </div>
 </div>
 </div>
@@ -15744,7 +15732,7 @@ const Header = () =&gt; {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://media.giphy.com/media/NaboQwhxK3gMU/giphy.gif" alt="easy peasy"></p>
+<h1 id="I-hope">I hope<a class="anchor-link" href="#I-hope">&#182;</a></h1><p><img src="https://media.giphy.com/media/NaboQwhxK3gMU/giphy.gif" alt="easy peasy"></p>
 
 </div>
 </div>
@@ -15756,27 +15744,22 @@ const Header = () =&gt; {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Thank-You">Thank You<a class="anchor-link" href="#Thank-You">&#182;</a></h1><p><img src="https://media.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" alt="Thank you"></p>
+<h1 id="Thank-You">Thank You<a class="anchor-link" href="#Thank-You">&#182;</a></h1><h1 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h1><p><img src="https://media.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" alt="Thank you"></p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h1>
 </div>
 </div>
 </div>
-
 </div></section></section>
 </div>
 </div>
@@ -15806,7 +15789,7 @@ require(
             controls: true,
             progress: true,
             history: true,
-            transition: "slide",
+            transition: "cube",
             slideNumber: "",
             plugins: [RevealNotes]
         });
